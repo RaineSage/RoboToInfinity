@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerStats stats;
+
     private Rigidbody2D rig;
 
     void Start()
     {
+        StartCoroutine(stats.addHealth(1f));
+        StartCoroutine(stats.addEnergy(1f));
+
         rig = GetComponent<Rigidbody2D>();
     }
 
@@ -21,6 +27,5 @@ public class PlayerController2D : MonoBehaviour
         {
             rig.AddForce(-Vector2.right * 2);
         }
-        Debug.Log(Input.GetAxisRaw("Horizontal"));
     }
 }
