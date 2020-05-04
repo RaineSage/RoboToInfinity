@@ -9,6 +9,8 @@ public class PlayerController2D : MonoBehaviour
 
     private Rigidbody2D rig;
 
+    public MaterialCounter counter;
+
     void Start()
     {
         StartCoroutine(stats.addHealth(1f));
@@ -26,6 +28,10 @@ public class PlayerController2D : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
             rig.AddForce(-Vector2.right * 2);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && counter.m_canJump == true)
+        {
+            rig.AddForce(Vector2.up * 10);
         }
     }
 }

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Material
+  - Battery
+  - Nutbolt
+  - Gear
+  - Screw
   layers:
   - Default
   - TransparentFX

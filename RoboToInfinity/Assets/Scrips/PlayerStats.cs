@@ -10,6 +10,7 @@ public class PlayerStats : ScriptableObject
 
     [SerializeField]
     private float healthPoints;
+    
 
     public float HP
     {
@@ -68,6 +69,7 @@ public class PlayerStats : ScriptableObject
     public bool haveEnergy = true;
 
     public int CurrLevel;
+
 
     public bool HasEnoughEnergy(float _input)
     {
